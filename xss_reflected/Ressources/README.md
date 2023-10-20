@@ -1,4 +1,4 @@
-# XSS_NSA_IMAGE
+# XSS_REFLECTED
 
 In the home page we found an image clickable.
 

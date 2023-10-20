@@ -1,4 +1,4 @@
-# XSS
+# XSS_STORED
 
 ## How to reproduce
 
