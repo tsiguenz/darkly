@@ -20,4 +20,4 @@ Brute force the hash with john:
 qwerty123@       (?)
 ```
 
-Now go to /whatever and just fill the form with the creds we get.
+Now go to /whatever and fill the form with the creds we get.
