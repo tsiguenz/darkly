@@ -1,6 +1,6 @@
 # XSS_STORED
 
-## How to reproduce
+### Breach Exploit
 
 In the page ```/index.php?page=feedback``` we can create a new feedback by filling out the form.
 There is an error in form validation:
@@ -41,3 +41,10 @@ In this code we can see the validation fields are named txtName and mtxMessage b
 We can see that the field mtxMessage is not the same as mtxtMessage.
 
 So we can fill the form with a valid value for the Name and bad value for the Message like 'a' and nothing and we get the flag.
+
+### Fix Breach
+Never trust user input, always sanitize input
+```https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html```
+
+### Documentation
+```https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html```

@@ -1,5 +1,6 @@
 # Hidden files
 
+### Breach Exploit
 With gobuster we find the file robots.txt who list some path forbidden for the crawlers:
 
 ```bash
@@ -26,3 +27,8 @@ $ wget -r -np -nH -e robots=off -A README http://192.168.56.101/.hidden/
 $ grep -R "flag" .hidden
 .hidden/.../README:Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
 ```
+### Fix Breach
+Do not store sensitive information on the client side
+
+### Documentation
+```https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage```

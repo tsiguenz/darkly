@@ -1,4 +1,7 @@
-# RECOVER
+# Hidden Field
+
+
+### Breach Exploit
 
 When we click on forget password we get this page ```/?page=recover#```
 
@@ -20,3 +23,7 @@ In the source code we can find this:
 - Change the value of this field by 'exploit' for exemple and we get the flag when we click on submit.
 
 - We can change the value of the body in the request to get the flag.
+
+### Fix Breach
+
+Do not use hidden value with sensitive information

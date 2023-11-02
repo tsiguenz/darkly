@@ -1,5 +1,6 @@
 # SQLI users
 
+### Breach Exploit
 From /?page=member we have an sql injection where we can dump all the db:
 
 ```
@@ -133,3 +134,10 @@ Then brute force an encryp to get the flag:
 md5(5ff9d0165b4f92b14994e5c685cdce28) = FortyTwo
 sha256(FortyTwo) = 9995cae900a927ab1500d317dfcc52c0ad8a521bea878a8e9fa381b41459b646
 ```
+
+### Fix Breach
+Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters. This way it is impossible for an attacker to inject malicious SQL.
+```https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html```
+
+### Documentation
+```https://owasp.org/www-community/attacks/SQL_Injection```
