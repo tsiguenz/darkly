@@ -132,7 +132,7 @@ Then brute force an encryp to get the flag:
 
 ```
 md5(5ff9d0165b4f92b14994e5c685cdce28) = FortyTwo
-sha256(FortyTwo) = 9995cae900a927ab1500d317dfcc52c0ad8a521bea878a8e9fa381b41459b646
+sha256(fortytwo) = 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
 ```
 
 ### Fix Breach
